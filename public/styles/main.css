@@ -1,0 +1,176 @@
+body {
+    font-family: 'Lora', serif;
+    background-color: beige;;
+    color: #333;
+    padding: 20px; /* Add padding around the page */
+    padding-top: 3px; /* Reduce the top padding to move header higher */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #6B705C; /* a muted green that complements beige */
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 0;
+    padding: 2rem 0; /* Increase padding to make the header taller */
+    transition: background-color 0.3s ease;
+}
+
+header:hover {
+    background-color: #556B2F; /* a darker green for hover effect */
+}
+
+header a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    font-weight: bold; /* Make the text bold */
+    cursor: default; /* Ensure the cursor doesn't change on hover */;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none; /* Remove underline */
+    color: #E9C46A; /* Golden color for better visibility */
+    font-size: 2rem; /* Make the text bigger */
+}
+
+header a:hover {
+    color: beige;
+}
+
+a {
+    color: #0077cc;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0055a4;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px 0;
+    /*border-bottom: 1px solid #E5E5E5;*/
+    border-bottom: none;
+    align-items: center; /* vertically align the items */
+}
+
+.date {
+    color: #888;
+    flex: 1;
+    font-size: 0.9rem;
+    margin-right: 20px; /* Add space between date and title */
+}
+
+.date-small {
+    display: block;  /* New class for date under the title on post page */
+    text-align: center;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: #e5e6df;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: "Georgia", serif; /* Change the font to Georgia for elegance */
+    transition: background-color 0.3s ease;
+    color: #384b73;  /* Change the color */
+    text-decoration: none;  /* Remove underline */
+}
+
+.tag:hover {
+    background-color: #CDCDCD;
+}
+
+.post-tags {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.post-title {
+    flex: 7;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: bold; /* Make the title bold */
+    margin: 0 10px; /* Adjust the margin to bring title closer to date */
+    text-decoration: none;  /* Remove underline */
+    color: #384b73;  /* Change the color */
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 5px; /* Reduce the margin to bring date closer */
+    font-size: 2rem;
+    text-align: center;  /* Center the title on post page */
+}
+
+p {
+    font-size: 1.4rem;
+    margin: 40px 0; /* Increase the top margin to move content down */
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; /* Change font for post content */
+}
+
+/* Fade-in effect for the entire content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.5s forwards;
+    max-width: 800px;  /* Limit the maximum width */
+    margin: 0 auto;  /* Center the content */
+}
+
+/* Smooth hover transitions */
+a, .tag {
+    transition: all 0.3s ease;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: #888;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    margin-bottom: 10px;
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    align-self: center;
+}
+
+img {
+    display: block;
+    max-width: 70%; /* ensures the image is responsive and doesn't overflow its container */
+    height: auto; /* maintains the image's aspect ratio */
+    margin: 20px 0; /* adds some spacing above and below the image */
+}

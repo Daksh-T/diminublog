@@ -1,0 +1,19 @@
+<%- include('layout.ejs') %>
+
+<main>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <span class="date"><%= post.date %></span>
+                <a class="post-title" href="/post/<%= post.filename %>"><%= post.title %></a>
+                <% if (post.tags && post.tags.length > 0) { %> <!-- Check if there are tags before rendering -->
+                    <% post.tags.forEach(tag => { %>
+                        <% if(tag && tag.trim() !== "") { %>
+                            <a class="tag has-content" href="/tag/<%= tag.replace("#", "%23") %>"><%= tag %></a>
+                        <% } %>
+                    <% }); %> 
+                <% } %>                             
+            </li>
+        <% }); %>        
+    </ul>
+</main>

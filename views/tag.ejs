@@ -1,0 +1,14 @@
+<%- include('layout.ejs') %>
+
+<main>
+    <h2><%= tagName %></h2>
+    <p><%= tagDescription %></p>
+    <ul>
+        <% posts.forEach(post => { %>
+            <li>
+                <a class="post-title" href="/post/<%= post.filename %>"><%= post.title %></a>
+                <span class="date"><%= post.date %></span>
+            </li>
+        <% }); %>
+    </ul>
+</main>

@@ -1,0 +1,16 @@
+<%- include('layout.ejs') %>
+
+<main>
+    <h2><%= post.title %></h2>
+    <span class="date-small"><%= post.date %></span>
+    <div class="post-tags">
+        <% post.tags.forEach(tag => { %>
+            <% if(tag && tag.trim() !== "") { %>
+                <a class="tag" href="/tag/<%= tag.replace("#", "%23") %>"><%= tag %></a>
+            <% } %>
+        <% }); %>
+    </div>
+    <div>
+        <%- post.content.replace(/<p>|<\/p>/g, '') %>
+    </div>
+</main>
